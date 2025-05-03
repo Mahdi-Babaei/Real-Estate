@@ -10,8 +10,62 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+<!-- HeroIcons -->
+<svg class="hidden">
+    <symbol id="chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+    </symbol>
+    <symbol id="burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+    </symbol>
+      
+</svg>
 
+
+
+    <nav>
+        <div class=" bg-white/40 h-24 py-5">
+            <div class="w-[90%] mx-auto flex justify-between items-center font-jakarta ">
+                <!-- Left Side -->
+                <div class="flex gap-x-16">
+                    <!-- Brand -->
+                     <div class="flex gap-x-2 items-start">
+                        <img src="images/logo.png" alt="">
+                        <a class="text-darkBlue font-bold text-xl/[150%]" href="#">Estatery</a>
+                    </div>
+                    <!-- List items -->
+                    <ul class="hidden gap-x-10 items-center text-mainColor font-medium pt-1 lg:inline-flex ">
+                        <li><a href="">Rent</a></li>
+                        <li><a href="">Buy</a></li>
+                        <li><a href="">Sell</a></li>
+                        <li>
+                            <a href="" class="flex items-end gap-x-1">Manage Property <svg class="w-5 h-5"><use href="#chevron"></use></svg></a>
+                        </li>
+                        <li>
+                            <a href="" class="flex items-end gap-x-1">Resources <svg class="w-5 h-5"><use href="#chevron"></use></svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Right Side -->
+                <div class="hidden lg:inline-flex gap-x-5 items-center font-bold pt-1">
+                    <div class="px-6 py-3 border border-[#E0DEF7] hover:border-[#7065F0] transition-all rounded-lg cursor-pointer">
+                        <a href="">Login</a>
+                    </div>
+                    <div class="px-5 py-3 bg-[#7065F0] hover:brightness-95  rounded-lg text-white cursor-pointer">
+                        <a href="#">Sign up</a>
+                    </div>
+                </div>
+                <!-- Burger Menu -->
+                <div class="lg:hidden">
+                    <svg class="w-6 h-6">
+                        <use href="#burger"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </nav>
     
+
     
 
 
