@@ -21,9 +21,9 @@
       
 </svg>
 
-
+    <!-- Navbar -->
     <nav>
-        <div class=" bg-white/40 h-24 py-5">
+        <div class="relative bg-white/40 h-24 py-5 z-50 border-b border-b-gray-200">
             <div class="w-[90%] mx-auto flex justify-between items-center font-jakarta ">
                 <!-- Left Side -->
                 <div class="flex gap-x-16">
@@ -47,10 +47,10 @@
                 </div>
                 <!-- Right Side -->
                 <div class="hidden lg:inline-flex gap-x-5 items-center font-bold pt-1">
-                    <div class="px-6 py-3 border border-[#E0DEF7] hover:border-[#7065F0] transition-all rounded-lg cursor-pointer">
+                    <div class="px-6 py-3 border border-lightPink hover:border-lightPurple transition-all rounded-lg cursor-pointer">
                         <a href="">Login</a>
                     </div>
-                    <div class="px-5 py-3 bg-[#7065F0] hover:brightness-95  rounded-lg text-white cursor-pointer">
+                    <div class="px-5 py-3 bg-lightPurple hover:brightness-95  rounded-lg text-white cursor-pointer">
                         <a href="#">Sign up</a>
                     </div>
                 </div>
@@ -65,9 +65,66 @@
     </nav>
     
 
+    <!-- Hero section -->
+    <section>
+        <div class="bg-[#f7f7fd] h-screen -mt-24">
+            <div class="container mx-auto font-jakarta pt-52">
+                <div class="flex flex-col gap-y-16">
+                    <h1 class="font-bold text-6xl text-mainColor -tracking-[1%]">Buy, rent, or sell your property easily</h1>
+                    <h3 class="text-xl/[160%] text-mainColor">A great platform to buy, sell, or even rent your properties without any commisions.</h3>
+                    <div class="flex gap-x-16 text-lightGray">
+                        <div class="border-l-4 border-l-lightPink pl-5">
+                            <h4 class="text-lightPurple text-3xl font-bold">50k+</h4>
+                            <span>renters</span>
+                        </div>
+                        <div class="border-l-4 border-l-lightPink pl-5">
+                            <h4 class="text-lightPurple text-3xl font-bold">10k+</h4>
+                            <span>properties</span>
+                        </div>
+                    </div>
+                    <div class="font-jakarta inline-flex flex-col">
+                        <div class="inline-flex items-center px-10 py-3 gap-x-10 bg-white rounded-t-[8px] text-lg text-mainColor">
+                            <div>
+                                <a href="">Rent</a>
+                            </div>
+                            <div>
+                                <a href="">Buy</a>
+                            </div>
+                            <div>
+                                <a href="">Sell</a>
+                            </div>
+                        </div>
+                        <div class="inline-flex items-center px-10 py-3 gap-x-10 bg-white rounded-t-[8px] text-lg text-mainColor">
+                            <div>
+                                <h4>Location</h4>
+                                <h2>user location</h2>
+                            </div>
+                            <div>
+                                <h4>When</h4>
+                                <input type="date" placeholder="Select Move-in Date">
+                            </div>
+                            <div>
+                                <div class="px-5 py-3 bg-lightPurple hover:brightness-95  rounded-lg text-white cursor-pointer">
+                                    <a href="#">Browse Properties</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
 
+
+
+
+
+
+
+
+    <div class="w-full h-[300px] block"> </div>
     <!-- Custom JS -->
     <script src="js/app.js"></script>
 </body>
