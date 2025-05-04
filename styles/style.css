@@ -11,7 +11,6 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
@@ -179,9 +178,6 @@
   .hidden {
     display: none;
   }
-  .table {
-    display: table;
-  }
   .size-6 {
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
@@ -204,14 +200,8 @@
   .w-\[90\%\] {
     width: 90%;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .items-center {
     align-items: center;
@@ -253,9 +243,6 @@
   .bg-\[\#7065F0\] {
     background-color: #7065F0;
   }
-  .bg-white {
-    background-color: var(--color-white);
-  }
   .bg-white\/40 {
     background-color: color-mix(in srgb, #fff 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -280,10 +267,6 @@
   .font-jakarta {
     font-family: var(--font-jakarta);
   }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
-  }
   .text-xl\/\[150\%\] {
     font-size: var(--text-xl);
     line-height: 150%;
@@ -296,9 +279,6 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
-  .text-\[\#100A55\] {
-    color: #100A55;
-  }
   .text-darkBlue {
     color: var(--color-darkBlue);
   }
@@ -307,16 +287,6 @@
   }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .filter {
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .transition-all {
     transition-property: all;
@@ -349,6 +319,26 @@
     }
   }
 }
+#navbar-hover {
+  position: relative;
+  transition: color .3s ease-in-out;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-mainColor);
+    transform: scaleX(0);
+    transition: transform .2s ease-in-out;
+  }
+  &:hover {
+    color: black;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -357,11 +347,6 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }
 @property --tw-blur {
   syntax: "*";
@@ -421,7 +406,6 @@
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
       --tw-blur: initial;
       --tw-brightness: initial;
       --tw-contrast: initial;
