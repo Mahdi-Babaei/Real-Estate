@@ -154,11 +154,14 @@
                 <div class="flex justify-between w-3/5 items-center px-10 py-3 bg-white rounded-b-[8px] rounded-r-[8px] text-lg text-mainColor">
                     <div class="border-r border-r-gray-300 pr-20">
                         <h4 class="text-lightGray">Location</h4>
-                        <h2 class="text-lg/[145%] font-bold">user location</h2>
+                        <h2 class="text-lg/[145%] font-bold">Barcelona, Spain</h2>
                     </div>
                     <div class="border-r border-r-gray-300 pr-20">
-                        <h4 class="text-lightGray">When</h4>
-                        <input class="text-lg/[145%] font-bold" type="text" placeholder="Select Move-in Date">
+                        <h4 class="text-lightGray  pl-2.5">When</h4>
+                        <!-- <input class="text-lg/[145%] font-bold" type="text" placeholder="Select Move-in Date"> -->
+                        <div class="relative max-w-sm">
+                            <input datepicker datepicker-autohide datepicker-buttons datepicker-autoselect-today id="default-datepicker" type="text" class=" text-mainColor text-lg rounded-lg p-2.5 placeholder-mainColor font-bold block w-full " placeholder="Select Move-in Date">
+                        </div>
                     </div>
                     <div>
                         <div class="px-5 py-3 bg-lightPurple hover:brightness-95  rounded-lg text-white cursor-pointer">
@@ -175,11 +178,17 @@
 
 
 
+    
+      
 
 
 
 
     <div class="w-full h-[300px] block"> </div>
+
+
+    <!-- datapicker -->
+    <script src="js/flowbite.min.js"></script>
     <!-- Custom JS -->
     <script src="js/app.js"></script>
 </body>
