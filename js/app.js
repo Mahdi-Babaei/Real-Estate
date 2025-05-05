@@ -1,6 +1,6 @@
 const $ = document
 const tabsDivElem = $.querySelectorAll(".tabsDiv")
-const browsePropertiesBtn = $.querySelector("#browsePropertiesBtn")
+const browsePropertiesBtn = $.querySelectorAll("#browsePropertiesBtn")
 
 // HeroSection tab switch
 tabsDivElem.forEach(div => {
@@ -26,10 +26,12 @@ const Toast = Swal.mixin({
     }
 });
 
-browsePropertiesBtn.addEventListener("click" , (e) => {
+browsePropertiesBtn.forEach(btn => {
+  btn.addEventListener("click" , (e) => {
     e.preventDefault()
     Toast.fire({
       icon: "error",
       title: "There is no available properties right now"
     });
+})
 })

@@ -18,6 +18,11 @@
     <symbol id="burger" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
     </symbol>
+    <symbol id="search-solid" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+        <path d="M8.25 10.875a2.625 2.625 0 1 1 5.25 0 2.625 2.625 0 0 1-5.25 0Z" />
+        <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.125 4.5a4.125 4.125 0 1 0 2.338 7.524l2.007 2.006a.75.75 0 1 0 1.06-1.06l-2.006-2.007a4.125 4.125 0 0 0-3.399-6.463Z" clip-rule="evenodd" />
+    </symbol>
+      
       
 </svg>
 
@@ -33,7 +38,7 @@
                         <a class="text-darkBlue font-bold text-xl/[150%]" href="#">Estatery</a>
                     </div>
                     <!-- List items -->
-                    <ul class="hidden gap-x-10 items-center text-mainColor font-medium pt-1 lg:inline-flex ">
+                    <ul class="hidden gap-x-10 items-center text-mainColor font-medium pt-1 xl:inline-flex ">
                         <li><a href="" id="navbar-hover">Rent</a></li>
                         <li><a href="" id="navbar-hover">Buy</a></li>
                         <li><a href="" id="navbar-hover">Sell</a></li>
@@ -46,7 +51,7 @@
                     </ul>
                 </div>
                 <!-- Right Side -->
-                <div class="hidden lg:inline-flex gap-x-5 items-center font-bold pt-1">
+                <div class="hidden xl:inline-flex gap-x-5 items-center font-bold pt-1">
                     <div class="px-6 py-3 border border-lightPink hover:border-lightPurple transition-all rounded-lg cursor-pointer">
                         <a href="">Login</a>
                     </div>
@@ -55,7 +60,7 @@
                     </div>
                 </div>
                 <!-- Burger Menu -->
-                <div class="lg:hidden">
+                <div class="xl:hidden">
                     <svg class="w-6 h-6">
                         <use href="#burger"></use>
                     </svg>
@@ -68,12 +73,31 @@
     <!-- Hero section -->
     <section>
         <div class="bg-[#f7f7fd] h-screen -mt-24 relative">
-            <div class="grid grid-cols-2">
-                <div class="ml-[20%] font-jakarta pt-52">
+            <div class="grid grid-cols-1 xl:grid-cols-2">
+                <!-- Left Side -->
+                <div class="px-10 xl:px-0 xl:ml-[10%] 2xl:ml-[20%] font-jakarta pt-32 xl:pt-52">
                     <div class="flex flex-col gap-y-12">
-                        <h1 class="font-bold text-6xl text-mainColor -tracking-[1%] w-3/4">Buy, rent, or sell your property easily</h1>
-                        <h3 class="text-xl/[160%] text-mainColor w-3/4">A great platform to buy, sell, or even rent your properties without any commisions.</h3>
-                        <div class="flex gap-x-16 text-lightGray">
+                        <h1 class="font-bold text-[40px] text-center xl:text-left xl:text-6xl text-mainColor -tracking-[1%] w-full 2xl:w-3/4">Buy, rent, or sell your property easily</h1>
+                        <h3 class="text-xl/[160%] text-mainColor text-center xl:text-left w-full xl:w-3/4">A great platform to buy, sell, or even rent your properties without any commisions.</h3>
+                        <!-- Search Tabs Mobile -->
+                         <div class="xl:hidden font-jakarta w-full mx-auto md:w-2/3 shadow shadow-gray-200 flex flex-col">
+                            <div class="inline-flex justify-evenly items-center bg-white rounded-t-[8px] text-lg text-mainColor border-b border-b-gray-300">
+                                <div class="px-8 py-3 tabsDiv activeTab">
+                                    <a href="">Rent</a>
+                                </div>
+                                <div class="px-8 py-3 tabsDiv">
+                                    <a href="">Buy</a>
+                                </div>
+                                <div class="px-8 py-3 tabsDiv">
+                                    <a href="">Sell</a>
+                                </div>
+                            </div>
+                            <div class="bg-white flex items-center justify-between px-4">
+                                <input type="text" class="w-full border-0 outline-0 py-4" placeholder="Search  location">
+                                <svg class="w-12 h-12 text-lightPurple" id="browsePropertiesBtn"><use href="#search-solid"></use></svg>
+                            </div>
+                         </div>
+                        <div class="flex gap-x-16 text-lightGray mx-auto xl:mx-0">
                             <div class="border-l-4 border-l-lightPink pl-5">
                                 <h4 class="text-lightPurple text-3xl font-bold">50k+</h4>
                                 <span>renters</span>
@@ -86,7 +110,8 @@
                         
                     </div>
                 </div>
-                <div class="w-full h-screen ml-auto" style="background-image: url(./images/hero/hero.png);">
+                <!-- Right Side -->
+                <div class="hidden xl:inline-block w-full h-screen ml-auto" style="background-image: url(./images/hero/hero.png);">
                     <div class="rounded-lg border-[1.5px] border-[#F0EFFB] hover:border-lightPurple cursor-pointer transition-all  font-jakarta bg-white inline-block mt-44 overflow-hidden">
                         <img src="./images/hero/home-1.png" alt="home">
                         <div class="px-5 py-5 flex flex-col gap-y-3">
@@ -139,7 +164,8 @@
                     </div>
                 </div>
             </div>
-            <div class="font-jakarta absolute bottom-30 left-[10%] w-4/5 z-50 mt-12 shadow shadow-gray-200">
+            <!-- Search Tabs Desktop -->
+            <div class="hidden xl:inline-block font-jakarta absolute bottom-5 2xl:bottom-30 left-[5%] 2xl:left-[10%] w-full 2xl:w-4/5 z-50 mt-12 shadow shadow-gray-200">
                 <div class="inline-flex items-center bg-white rounded-t-[8px] text-lg text-mainColor ">
                     <div class="px-10 py-3 tabsDiv activeTab">
                         <a href="">Rent</a>
@@ -151,12 +177,12 @@
                         <a href="">Sell</a>
                     </div>
                 </div>
-                <div class="flex justify-between w-3/5 items-center px-10 py-3 bg-white rounded-b-[8px] rounded-r-[8px] text-lg text-mainColor">
-                    <div class="border-r border-r-gray-300 pr-20">
+                <div class="flex justify-around 2xl:justify-between w-3/5 items-center px-10 py-3 bg-white rounded-b-[8px] rounded-r-[8px] text-lg text-mainColor">
+                    <div class="border-r border-r-gray-300 pr-10 2xl:pr-20">
                         <h4 class="text-lightGray">Location</h4>
                         <h2 class="text-lg/[145%] font-bold">Barcelona, Spain</h2>
                     </div>
-                    <div class="border-r border-r-gray-300 pr-20">
+                    <div class="border-r border-r-gray-300 2xl:pr-20">
                         <h4 class="text-lightGray  pl-2.5">When</h4>
                         <!-- <input class="text-lg/[145%] font-bold" type="text" placeholder="Select Move-in Date"> -->
                         <div class="relative max-w-sm">
