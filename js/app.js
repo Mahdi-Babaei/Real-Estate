@@ -1,14 +1,15 @@
 const $ = document
 const tabsDivElem = $.querySelectorAll(".tabsDiv")
 const browsePropertiesBtn = $.querySelectorAll("#browsePropertiesBtn")
+const firstSecTabs = $.querySelectorAll("#firstSecTabs")
 
 // HeroSection tab switch
 tabsDivElem.forEach(div => {
     div.addEventListener("click" , (e) => {
         e.preventDefault()
         
-        tabsDivElem.forEach(div => div.classList.remove("activeTab"))
-        div.classList.add("activeTab")
+        tabsDivElem.forEach(div => div.classList.remove("heroActiveTab"))
+        div.classList.add("heroActiveTab")
     })
 })
 
@@ -34,4 +35,12 @@ browsePropertiesBtn.forEach(btn => {
       title: "There is no available properties right now"
     });
 })
+})
+
+// First Section Tab switching
+firstSecTabs.forEach(div => {
+    div.addEventListener("click" , () => {
+        firstSecTabs.forEach(div => div.classList.remove("firstSecActiveTab"))
+        div.classList.add("firstSecActiveTab")
+    })
 })
