@@ -210,10 +210,10 @@
 
     <!-- For Tenants & Landlords Section -->
     <section>
-        <div class="container mx-auto flex gap-x-20 items-center justify-center mt-32 font-jakarta">
-            <!-- Left Side Image -->
-            <div class="bg-lightPink rounded-lg relative">
-                <img src="./images/sections/home.png" alt="home">
+        <div class="container mx-auto flex gap-x-40 items-center justify-between mt-32 font-jakarta">
+            <!-- Left Side -->
+            <div class="bg-lightPink rounded-lg relative w-2/3">
+                <img src="./images/sections/home.png" alt="home" class="w-full">
                 <div class="bg-white border-2 border-lightPink rounded-lg py-3 px-6 flex gap-x-6 absolute w-auto top-10 -left-20 items-center">
                     <div class="rounded-full bg-lightPink text-lightPurple h-12 w-12 flex items-center justify-center">
                         <svg class="w-7 h-7"><use href="#video"></use></svg>
@@ -233,8 +233,22 @@
                     </div>
                 </div>
             </div>
-            <div>
-
+            <!-- Right Side -->
+            <div class="flex flex-col gap-y-10 w-2/3">
+                <div class="flex w-fit gap-x-2 p-2 rounded-lg bg-[#EFEFFB] border-2 border-lightPink text-lightGray">
+                    <div class="flex items-center justify-center px-6 py-3 rounded-lg font-bold text-lightPurple bg-white border-2 border-lightPink cursor-pointer"> <!-- active : bg-white border-2 border-lightPink font-bold text-lightPurple -->
+                        <h3 class="text-lg leading-6">For Tenants</h3>
+                    </div>
+                    <div class="flex items-center justify-center px-6 py-3 rounded-lg cursor-pointer">
+                        <h3 class="text-lg leading-6">For Landlords</h3>
+                    </div>
+                </div>
+                <h2 class="font-bold text-[40px]/[140%] text-mainColor w-2/3">We make it easy for tenants and landlords.</h2>
+                <p class="leading-[160%] text-lightGray w-1/2">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
+                <button class="flex w-fit px-5 py-2 rounded-lg items-center gap-x-1 cursor-pointer bg-lightPurple hover:brightness-95 text-white">
+                    <a href="#" class="pb-1">See more</a>
+                    <svg class="w-4 h-4 -rotate-90"><use href="#chevron"></use></svg>
+                </button>
             </div>
         </div>
     </section>
