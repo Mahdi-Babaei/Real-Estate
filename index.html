@@ -89,7 +89,7 @@
                         <!-- Search Tabs Mobile -->
                          <div class="xl:hidden font-jakarta w-full mx-auto md:w-2/3 shadow shadow-gray-200 flex flex-col">
                             <div class="inline-flex justify-evenly items-center bg-white rounded-t-[8px] text-lg text-mainColor border-b border-b-gray-300">
-                                <div class="px-8 py-3 tabsDiv activeTab">
+                                <div class="px-8 py-3 tabsDiv heroActiveTab">
                                     <a href="">Rent</a>
                                 </div>
                                 <div class="px-8 py-3 tabsDiv">
@@ -210,42 +210,42 @@
 
     <!-- For Tenants & Landlords Section -->
     <section>
-        <div class="container mx-auto flex gap-x-40 items-center justify-between mt-32 font-jakarta">
+        <div class="container mx-auto flex flex-col lg:flex-row lg:gap-x-20 xl:gap-x-40 items-center mt-32 font-jakarta lg:w-4/5 2xl:w-auto">
             <!-- Left Side -->
-            <div class="bg-lightPink rounded-lg relative w-2/3">
-                <img src="./images/sections/home.png" alt="home" class="w-full">
-                <div class="bg-white border-2 border-lightPink rounded-lg py-3 px-6 flex gap-x-6 absolute w-auto top-10 -left-20 items-center">
+            <div class="bg-lightPink rounded-lg relative w-4/5  xl:w-2/3 ">
+                <img src="./images/sections/home.png" alt="home" class="h-[420px] xl:h-auto w-full object-cover rounded-b-lg">
+                <div class="bg-white border-2 border-lightPink rounded-lg py-3 px-3 xl:px-6 flex gap-x-6 absolute w-auto top-5 -left-5 xl:-left-20 items-center">
                     <div class="rounded-full bg-lightPink text-lightPurple h-12 w-12 flex items-center justify-center">
                         <svg class="w-7 h-7"><use href="#video"></use></svg>
                     </div>
                     <div class="flex flex-col gap-y-1">
-                        <h2 class="font-bold text-mainColor text-xl/[160%]">Virtual home tour</h2>
-                        <span class="text-lightGray">We provide you with virtual tour</span>
+                        <h2 class="font-bold text-mainColor text-lg/[145%] xl:text-xl/[160%]">Virtual home tour</h2>
+                        <span class="text-lightGray text-sm xl:text-base">We provide you with virtual tour</span>
                     </div>
                 </div>
-                <div class="bg-white border-2 border-lightPink rounded-lg py-3 px-6 absolute -bottom-11 right-0 left-0 mx-auto w-fit flex gap-x-8 justify-center">
+                <div class="bg-white border-2 border-lightPink rounded-lg py-3 px-3 xl:px-6 absolute -bottom-8 xl:-bottom-11 right-0 left-0 mx-auto w-fit flex  xl:gap-x-8 justify-center">
                     <div class="flex flex-col gap-y-1">
-                        <h2 class="font-bold text-mainColor text-xl/[160%]">Find the best deal</h2>
-                        <span class="text-lightGray">Browse thousands of properties</span>
+                        <h2 class="font-bold text-mainColor text-lg/[145%] xl:text-xl/[160%]">Find the best deal</h2>
+                        <span class="text-lightGray text-sm xl:text-base">Browse thousands of properties</span>
                     </div>
-                    <div class="rounded-full border border-white bg-lightPurple text-white h-12 w-12 flex items-center justify-center -mt-9">
+                    <div class="rounded-full border border-white bg-lightPurple text-white h-12 w-12 flex items-center justify-center -mt-9 ">
                         <svg class="w-7 h-7"><use href="#home"></use></svg>
                     </div>
                 </div>
             </div>
             <!-- Right Side -->
-            <div class="flex flex-col gap-y-10 w-2/3">
-                <div class="flex w-fit gap-x-2 p-2 rounded-lg bg-[#EFEFFB] border-2 border-lightPink text-lightGray">
-                    <div id="firstSecTabs" class="flex items-center justify-center px-6 py-3 rounded-lg firstSecActiveTab cursor-pointer"> <!-- active : bg-white border-2 border-lightPink font-bold text-lightPurple -->
+            <div class="flex flex-col gap-y-10 w-4/5 mt-16 xl:mt-0 xl:w-2/3">
+                <div class="flex w-fit gap-x-2 p-2 rounded-lg bg-[#EFEFFB] border-2 border-lightPink text-lightGray mx-auto xl:mx-0">
+                    <div id="firstSecTabs" class="flex items-center justify-center px-3 xl:px-6 py-3 rounded-lg firstSecActiveTab cursor-pointer"> <!-- active : bg-white border-2 border-lightPink font-bold text-lightPurple -->
                         <h3 class="text-lg leading-6">For Tenants</h3>
                     </div>
-                    <div id="firstSecTabs" class="flex items-center justify-center px-6 py-3 rounded-lg  cursor-pointer">
+                    <div id="firstSecTabs" class="flex items-center justify-center px-3 xl:px-6 py-3 rounded-lg  cursor-pointer">
                         <h3 class="text-lg leading-6">For Landlords</h3>
                     </div>
                 </div>
-                <h2 class="font-bold text-[40px]/[140%] text-mainColor w-2/3">We make it easy for tenants and landlords.</h2>
-                <p class="leading-[160%] text-lightGray w-1/2">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
-                <button class="flex w-fit px-5 py-2 rounded-lg items-center gap-x-1 cursor-pointer bg-lightPurple hover:brightness-95 text-white">
+                <h2 class="font-bold text-[32px]/[125%] xl:text-[40px]/[140%] text-mainColor w-full text-center xl:text-left 2xl:w-2/3">We make it easy for tenants and landlords.</h2>
+                <p class="leading-[160%] text-lightGray w-full text-center xl:text-left 2xl:w-1/2">Whether it’s selling your current home, getting financing, or buying a new home, we make it easy  and efficient. The best part? you’ll save a bunch of money and time with our services.</p>
+                <button class="flex w-fit px-5 py-2 rounded-lg items-center gap-x-1 cursor-pointer bg-lightPurple hover:brightness-95 text-white mx-auto xl:mx-0">
                     <a href="#" class="pb-1">See more</a>
                     <svg class="w-4 h-4 -rotate-90"><use href="#chevron"></use></svg>
                 </button>
