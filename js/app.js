@@ -51,7 +51,7 @@ firstSecTabs.forEach(div => {
 
 // Properties Box Generator
 propertiesContainer.forEach(div => {
-    div.className = 'relative rounded-lg border-[1.5px] border-[#F0EFFB] cursor-pointer bg-white inline-block'
+    div.className = 'relative rounded-lg border-[1.5px] border-[#F0EFFB] cursor-pointer bg-white inline-block hover:shadow-xl transition-all swiper-slide'
     div.insertAdjacentHTML("beforeend" , `
                     <img src="./images/sections/${div.dataset.img}.png" alt="home" class="rounded-t-lg">
                     <!-- Popular Badge Start -->
@@ -69,14 +69,14 @@ propertiesContainer.forEach(div => {
                         </div>
                         <h2 class="text-2xl/[150%] font-bold text-mainColor">${div.dataset.name}</h2>
                         <h5 class="text-base/[150%] text-lightGray border-b border-[#F0EFFB] pb-3">${div.dataset.address}</h5>
-                        <div class="flex gap-x-4">
+                        <div class="flex gap-x-3">
                             <div>
                                 <i class="fa-solid fa-bed text-lightPurple pr-1"></i>
-                                <span>${div.dataset.beds} Beds</span>
+                                <span>${div.dataset.beds} ${window.innerWidth >= 768 ? 'Beds' : ''}</span>
                             </div>
                             <div>
                                 <i class="fa-solid fa-bath text-lightPurple pr-1"></i>
-                                <span>${div.dataset.bathrooms} Bathrooms</span>
+                                <span>${div.dataset.bathrooms} ${window.innerWidth >= 768 ? 'Bathrooms' : ''}</span>
                             </div>
                             <div>
                                 <i class="fa-solid fa-expand text-lightPurple pr-1"></i>
@@ -99,5 +99,21 @@ function isPopular (status) {
                     </div>`
     } else {
       return ` `
+    }
+}
+
+window.onresize = () => {
+    if (window.innerWidth >= 768) {
+        $.querySelector("#swiperContainer").className = 'hidden'
+    } else {
+        $.querySelector("#swiperContainer").className = 'swiper mySwiper'
+    }
+}
+
+window.onload = () => {
+    if (window.innerWidth >= 768) {
+        $.querySelector("#swiperContainer").className = 'hidden'
+    } else {
+        $.querySelector("#swiperContainer").className = 'swiper mySwiper'
     }
 }

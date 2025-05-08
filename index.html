@@ -6,6 +6,8 @@
     <title>Estatery</title>
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+      <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Custom Css -->
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -317,19 +319,20 @@
 
     <!-- Properties FlexBox -->
     <section>
-        <div class="container mx-auto mt-32 font-jakarta">
+        <div class="container mx-auto mt-32 font-jakarta overflow-hidden">
             <!-- Header -->
-            <div class="flex justify-between items-center ">
-                <div class="text-mainColor">
+            <div class="flex flex-col xl:flex-row gap-y-10 text-center xl:text-left justify-between items-center ">
+                <div class="text-mainColor w-4/5 pb-10 md:pb-0">
                     <h2 class="font-bold text-[40px]/[140%] pb-4">Based on your location</h2>
                     <p>Some of our picked properties near you location.</p>
                 </div>
-                <button class="w-fit px-6 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white mx-auto xl:mx-0">
+                <!-- Desktop Button -->
+                <button class="hidden md:inline-block w-fit px-6 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white mx-auto xl:mx-0">
                     <a href="#" class="pb-1">Browse more properties</a>
                 </button>
             </div>
-            <!-- Body -->
-            <div class="grid grid-cols-4 gap-10 pt-20" id="properties-container">
+            <!-- Body Desktop -->
+            <div class="hidden xl:grid mx-5 grid-cols-1 xl:grid-cols-4 gap-10 pt-20" id="properties-container">
                 <div data-popular="true" data-img="home-3" data-price="2,095" data-name="Palm Harbor" data-address="2699 Green Valley, Highland Lake, FL" data-beds="3" data-bathrooms="2" data-area="5x7"></div>
                 <div data-popular="true" data-img="home-4" data-price="$2,700" data-name="Beverly Springfield" data-address="2821 Lake Sevilla, Palm Harbor, TX" data-beds="4" data-bathrooms="2" data-area="5x8"></div>
                 <div data-popular="false" data-img="home-5" data-price="$2,450" data-name="Faulkner Ave" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="7x5"></div>
@@ -339,11 +342,33 @@
                 <div data-popular="true" data-img="home-3" data-price="$2,911" data-name="Palm Harbor" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="2x5"></div>
                 <div data-popular="false" data-img="home-4" data-price="$2,110" data-name="Faulkner Ave" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="1" data-bathrooms="1" data-area="9x3"></div>
             </div>
+
+
+            <!-- Body Mobile -->
+             <!-- Swiper -->
+             <div class="swiper mySwiper" id="swiperContainer">
+               <div class="swiper-wrapper" id="properties-container">
+                    <div data-popular="true" data-img="home-3" data-price="2,095" data-name="Palm Harbor" data-address="2699 Green Valley, Highland Lake, FL" data-beds="3" data-bathrooms="2" data-area="5x7"></div>
+                    <div data-popular="true" data-img="home-4" data-price="$2,700" data-name="Beverly Springfield" data-address="2821 Lake Sevilla, Palm Harbor, TX" data-beds="4" data-bathrooms="2" data-area="5x8"></div>
+                    <div data-popular="false" data-img="home-5" data-price="$2,450" data-name="Faulkner Ave" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="7x5"></div>
+                    <div data-popular="true" data-img="home-6" data-price="$8,320" data-name="St. Crystal" data-address="210 US Highway, Highland Lake, FL" data-beds="8" data-bathrooms="3" data-area="9x2"></div>
+                    <div data-popular="false" data-img="home-7" data-price="$4,550" data-name="Cove Red" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="5" data-bathrooms="2" data-area="7x7"></div>
+                    <div data-popular="true" data-img="home-8" data-price="$7,230" data-name="Tarpon Bay" data-address="103 Lake Shores, Michigan, IN" data-beds="4" data-bathrooms="2" data-area="8x4"></div>
+                    <div data-popular="true" data-img="home-3" data-price="$2,911" data-name="Palm Harbor" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="2x5"></div>
+                    <div data-popular="false" data-img="home-4" data-price="$2,110" data-name="Faulkner Ave" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="1" data-bathrooms="1" data-area="9x3"></div>
+               </div>
+             </div>
+
+             <!-- Desktop Button -->
+              <div class="flex justify-center mt-5">
+                  <button class="md:hidden w-4/5 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white">
+                     <a href="#" class="pb-1">Browse more properties</a>
+                 </button>
+              </div>
         </div>
     </section>
 
 
-    
     
 
 
@@ -351,7 +376,15 @@
     <div class="w-full h-[300px] block"> </div>
 
 
-
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+      });
+    </script>
     <!-- Swal Library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- datapicker -->
