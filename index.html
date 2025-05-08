@@ -315,9 +315,10 @@
     </section>
 
 
-    <!-- Properties Grid -->
+    <!-- Properties FlexBox -->
     <section>
         <div class="container mx-auto mt-32 font-jakarta">
+            <!-- Header -->
             <div class="flex justify-between items-center ">
                 <div class="text-mainColor">
                     <h2 class="font-bold text-[40px]/[140%] pb-4">Based on your location</h2>
@@ -327,13 +328,28 @@
                     <a href="#" class="pb-1">Browse more properties</a>
                 </button>
             </div>
+            <!-- Body -->
             <div class="flex flex-row gap-x-10 pt-20">
-                <div class="rounded-lg border-[1.5px] border-[#F0EFFB] cursor-pointer bg-white inline-block overflow-hidden">
+                <div class="relative rounded-lg border-[1.5px] border-[#F0EFFB] cursor-pointer bg-white inline-block">
                     <img src="./images/sections/home-3.png" alt="home">
+                    <!-- Popular Badge Start -->
+                    <div class="absolute -left-[15px] -mt-5">
+                        <div class="flex w-fit items-center justify-center py-2 px-3 gap-x-2 bg-lightPurple text-white font-jakarta font-bold rounded-t-lg rounded-br-lg">
+                            <i class="fa-solid fa-star"></i>
+                            <span>POPULAR</span>
+                        </div>
+                        <div id="triangle"></div>
+                    </div>
+                    <!-- Popular Badge End -->
                     <div class="px-5 py-5 flex flex-col gap-y-3">
-                        <div class="flex items-center">
-                            <h4 class="text-lightPurple font-bold text-2xl/[150%] pr-1">$2,095</h4>
-                            <span class="text-sm/[140%] text-lightGray">/month</span>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <h4 class="text-lightPurple font-bold text-2xl/[150%] pr-1">$2,095</h4>
+                                <span class="text-sm/[140%] text-lightGray">/month</span>
+                            </div>
+                            <div class="flex items-center justify-center rounded-full h-12 w-12 border border-lightPink">
+                                <i class="fa-regular fa-heart fa-xl text-lightPurple"></i>
+                            </div>
                         </div>
                         <h2 class="text-2xl/[150%] font-bold text-mainColor">Palm Harbor</h2>
                         <h5 class="text-base/[150%] text-lightGray border-b border-[#F0EFFB] pb-3">2699 Green Valley, Highland Lake, FL</h5>
@@ -359,8 +375,7 @@
 
 
     
-      
-
+    
 
 
 
