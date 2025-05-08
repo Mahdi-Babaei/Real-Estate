@@ -53,7 +53,7 @@ firstSecTabs.forEach(div => {
 propertiesContainer.forEach(div => {
     div.className = 'relative rounded-lg border-[1.5px] border-[#F0EFFB] cursor-pointer bg-white inline-block hover:shadow-xl transition-all swiper-slide'
     div.insertAdjacentHTML("beforeend" , `
-                    <img src="./images/sections/${div.dataset.img}.png" alt="home" class="rounded-t-lg">
+                    <img src="./images/sections/${div.dataset.img}.png" alt="home" class="rounded-t-lg w-full">
                     <!-- Popular Badge Start -->
                     ${isPopular(div.dataset.popular)}
                     <!-- Popular Badge End -->
@@ -107,6 +107,12 @@ window.onresize = () => {
         $.querySelector("#swiperContainer").className = 'hidden'
     } else {
         $.querySelector("#swiperContainer").className = 'swiper mySwiper'
+    }
+
+
+    // for text changes in cards
+    if (window.innerWidth === 768) {
+        location.reload()
     }
 }
 
