@@ -136,7 +136,7 @@ testimonialsWrapper.forEach(dataDiv => {
     warpperDiv.className = 'swiper-slide'
     warpperDiv.insertAdjacentHTML("beforeend" , `
                             <div class="flex flex-col gap-y-10 pt-16 items-center">
-                                <p class="w-2/3 text-xl/[160%]">${dataDiv.dataset.comment}</p>
+                                <p class="w-full lg:w-2/3 text-xl/[160%]">${dataDiv.dataset.comment}</p>
                                 <div class="flex items-center justify-center gap-x-3">
                                     <img src="./images/profiles/${dataDiv.dataset.profile}.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-1 object-cover">
                                     <div class="flex items-center gap-x-1">
