@@ -319,35 +319,21 @@
 
     <!-- Properties FlexBox -->
     <section>
-        <div class="container mx-auto mt-32 font-jakarta overflow-hidden">
-            <!-- Header -->
-            <div class="flex flex-col lg:flex-row gap-y-10 text-center xl:text-left justify-between items-center ">
-                <div class="text-mainColor w-4/5 mx-auto xl:mx-0 xl:w-auto pb-10 md:pb-0">
-                    <h2 class="font-bold text-[40px]/[140%] pb-4">Based on your location</h2>
-                    <p>Some of our picked properties near you location.</p>
+        <div class="properties-bg">
+            <div class="container mx-auto mt-32 font-jakarta overflow-hidden">
+                <!-- Header -->
+                <div class="flex flex-col lg:flex-row gap-y-10 text-center xl:text-left justify-between items-center ">
+                    <div class="text-mainColor w-4/5 mx-auto xl:mx-0 xl:w-auto pb-10 md:pb-0">
+                        <h2 class="font-bold text-[40px]/[140%] pb-4">Based on your location</h2>
+                        <p>Some of our picked properties near you location.</p>
+                    </div>
+                    <!-- Desktop Button -->
+                    <button class="hidden xl:inline-block w-fit px-6 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white mx-auto xl:mx-0">
+                        <a href="#" class="pb-1">Browse more properties</a>
+                    </button>
                 </div>
-                <!-- Desktop Button -->
-                <button class="hidden xl:inline-block w-fit px-6 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white mx-auto xl:mx-0">
-                    <a href="#" class="pb-1">Browse more properties</a>
-                </button>
-            </div>
-            <!-- Body Desktop -->
-            <div class="hidden md:grid mx-5 grid-cols-2 xl:grid-cols-4 gap-10 pt-20" id="properties-container">
-                <div data-popular="true" data-img="home-3" data-price="2,095" data-name="Palm Harbor" data-address="2699 Green Valley, Highland Lake, FL" data-beds="3" data-bathrooms="2" data-area="5x7"></div>
-                <div data-popular="true" data-img="home-4" data-price="$2,700" data-name="Beverly Springfield" data-address="2821 Lake Sevilla, Palm Harbor, TX" data-beds="4" data-bathrooms="2" data-area="5x8"></div>
-                <div data-popular="false" data-img="home-5" data-price="$2,450" data-name="Faulkner Ave" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="7x5"></div>
-                <div data-popular="true" data-img="home-6" data-price="$8,320" data-name="St. Crystal" data-address="210 US Highway, Highland Lake, FL" data-beds="8" data-bathrooms="3" data-area="9x2"></div>
-                <div data-popular="false" data-img="home-7" data-price="$4,550" data-name="Cove Red" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="5" data-bathrooms="2" data-area="7x7"></div>
-                <div data-popular="true" data-img="home-8" data-price="$7,230" data-name="Tarpon Bay" data-address="103 Lake Shores, Michigan, IN" data-beds="4" data-bathrooms="2" data-area="8x4"></div>
-                <div data-popular="true" data-img="home-3" data-price="$2,911" data-name="Palm Harbor" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="2x5"></div>
-                <div data-popular="false" data-img="home-4" data-price="$2,110" data-name="Faulkner Ave" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="1" data-bathrooms="1" data-area="9x3"></div>
-            </div>
-
-
-            <!-- Body Mobile -->
-             <!-- Swiper -->
-             <div class="swiper mySwiper" id="swiperContainer">
-               <div class="swiper-wrapper" id="properties-container">
+                <!-- Body Desktop -->
+                <div class="hidden md:grid mx-5 grid-cols-2 xl:grid-cols-4 gap-10 pt-20" id="properties-container">
                     <div data-popular="true" data-img="home-3" data-price="2,095" data-name="Palm Harbor" data-address="2699 Green Valley, Highland Lake, FL" data-beds="3" data-bathrooms="2" data-area="5x7"></div>
                     <div data-popular="true" data-img="home-4" data-price="$2,700" data-name="Beverly Springfield" data-address="2821 Lake Sevilla, Palm Harbor, TX" data-beds="4" data-bathrooms="2" data-area="5x8"></div>
                     <div data-popular="false" data-img="home-5" data-price="$2,450" data-name="Faulkner Ave" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="7x5"></div>
@@ -356,46 +342,92 @@
                     <div data-popular="true" data-img="home-8" data-price="$7,230" data-name="Tarpon Bay" data-address="103 Lake Shores, Michigan, IN" data-beds="4" data-bathrooms="2" data-area="8x4"></div>
                     <div data-popular="true" data-img="home-3" data-price="$2,911" data-name="Palm Harbor" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="2x5"></div>
                     <div data-popular="false" data-img="home-4" data-price="$2,110" data-name="Faulkner Ave" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="1" data-bathrooms="1" data-area="9x3"></div>
-               </div>
-             </div>
-
-             <!-- Mobile Button -->
-              <div class="flex justify-center mt-5">
-                  <button class="xl:hidden w-4/5 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white">
-                     <a href="#" class="pb-1">Browse more properties</a>
-                 </button>
-              </div>
+                </div>
+    
+    
+                <!-- Body Mobile -->
+                 <!-- Swiper -->
+                 <div class="swiper mySwiper" id="swiperContainer">
+                   <div class="swiper-wrapper" id="properties-container">
+                        <div data-popular="true" data-img="home-3" data-price="2,095" data-name="Palm Harbor" data-address="2699 Green Valley, Highland Lake, FL" data-beds="3" data-bathrooms="2" data-area="5x7"></div>
+                        <div data-popular="true" data-img="home-4" data-price="$2,700" data-name="Beverly Springfield" data-address="2821 Lake Sevilla, Palm Harbor, TX" data-beds="4" data-bathrooms="2" data-area="5x8"></div>
+                        <div data-popular="false" data-img="home-5" data-price="$2,450" data-name="Faulkner Ave" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="7x5"></div>
+                        <div data-popular="true" data-img="home-6" data-price="$8,320" data-name="St. Crystal" data-address="210 US Highway, Highland Lake, FL" data-beds="8" data-bathrooms="3" data-area="9x2"></div>
+                        <div data-popular="false" data-img="home-7" data-price="$4,550" data-name="Cove Red" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="5" data-bathrooms="2" data-area="7x7"></div>
+                        <div data-popular="true" data-img="home-8" data-price="$7,230" data-name="Tarpon Bay" data-address="103 Lake Shores, Michigan, IN" data-beds="4" data-bathrooms="2" data-area="8x4"></div>
+                        <div data-popular="true" data-img="home-3" data-price="$2,911" data-name="Palm Harbor" data-address="909 Woodland St, Michigan, IN" data-beds="3" data-bathrooms="1" data-area="2x5"></div>
+                        <div data-popular="false" data-img="home-4" data-price="$2,110" data-name="Faulkner Ave" data-address="243 Curlew Road, Palm Harbor, TX" data-beds="1" data-bathrooms="1" data-area="9x3"></div>
+                   </div>
+                 </div>
+    
+                 <!-- Mobile Button -->
+                  <div class="flex justify-center mt-5">
+                      <button class="xl:hidden w-4/5 py-4 rounded-lg items-center cursor-pointer bg-lightPurple hover:brightness-95 text-white">
+                         <a href="#" class="pb-1">Browse more properties</a>
+                     </button>
+                  </div>
+            </div>
         </div>
     </section>
 
 
     <!-- Testimonials -->
     <section>
-        <div class="container mt-32 mx-auto text-center font-jakarta">
-            <!-- Header -->
-             <div class="flex flex-col gap-y-5 text-mainColor items-center">
-                <h2 class="font-bold text-[40px]/[140%]">Testimonials</h2>
-                <p class="w-1/4">See what our property managers, landlords, and tenants have to say</p>
-             </div>
-            <!-- Body -->
-            <div class="flex flex-col gap-y-10 pt-16 items-center">
-                <p class="w-1/2 text-xl/[160%]">“Estatery is the platform I go to on almost a daily basis for 2nd home and vacation condo shopping, or to just look at dream homes in new areas. Thanks for fun home shopping and comparative analyzing, Estatery!”</p>
-                <div class="flex items-center justify-center gap-x-3">
-                    <img src="./images/profiles/person-1.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-2">
-                    <div class="flex items-center gap-x-1">
-                        <h4 class="font-bold">Mira Culos,</h4>
-                        <span class="text-lightGray font-normal">Renter</span>
+        <div class="testimonials-bg">
+            <div class="container pt-32 mx-auto text-center font-jakarta overflow-hidden py-10">
+                <!-- Header -->
+                 <div class="flex flex-col gap-y-5 text-mainColor items-center">
+                    <h2 class="font-bold text-[40px]/[140%]">Testimonials</h2>
+                    <p class="w-1/4">See what our property managers, landlords, and tenants have to say</p>
+                 </div>
+                <!-- Body -->
+                <!-- Swiper -->
+                <div class="swiper mySwiper-2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="flex flex-col gap-y-10 pt-16 items-center">
+                            <p class="w-2/3 text-xl/[160%]">“Estatery is the platform I go to on almost a daily basis for 2nd home and vacation condo shopping, or to just look at dream homes in new areas. Thanks for fun home shopping and comparative analyzing, Estatery!”</p>
+                            <div class="flex items-center justify-center gap-x-3">
+                                <img src="./images/profiles/person-1.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-1 object-cover">
+                                <div class="flex items-center gap-x-1">
+                                    <h4 class="font-bold">Mira Culos,</h4>
+                                    <span class="text-lightGray font-normal">Renter</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col gap-y-10 pt-16 items-center">
+                            <p class="w-2/3 text-xl/[160%]">“Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem facere dolores blanditiis perferendis quis asperiores, quam quidem, incidunt maxime quae nulla distinctio amet. Eligendi nemo omnis error libero provident consequatur.</p>
+                            <div class="flex items-center justify-center gap-x-3">
+                                <img src="./images/profiles/person-2.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-1 object-cover">
+                                <div class="flex items-center gap-x-1">
+                                    <h4 class="font-bold">Adam Jackson,</h4>
+                                    <span class="text-lightGray font-normal">Buyer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="flex flex-col gap-y-10 pt-16 items-center">
+                            <p class="w-2/3 text-xl/[160%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eveniet quisquam natus architecto qui sint atque nobis, consectetur neque suscipit itaque nam libero quod repellendus aperiam adipisci animi sit similique debitis sequi veniam, cum culpa!</p>
+                            <div class="flex items-center justify-center gap-x-3">
+                                <img src="./images/profiles/person-3.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-1 object-cover">
+                                <div class="flex items-center gap-x-1">
+                                    <h4 class="font-bold">Frankie Yamal,</h4>
+                                    <span class="text-lightGray font-normal">Renter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </section>
     
-
-
-
-
-
 
 
 
@@ -411,6 +443,14 @@
         slidesPerView: "auto",
         spaceBetween: 30,
       });
+      var swiper2 = new Swiper(".mySwiper-2", {
+      spaceBetween: 30,
+      autoplay: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
     </script>
     <!-- Swal Library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
