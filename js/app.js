@@ -113,6 +113,12 @@ window.onresize = () => {
     // for text changes in cards
     if (window.innerWidth === 768) {
         location.reload()
+    } 
+    if (window.innerWidth < 768) {
+        Toast.fire({
+            icon: "info",
+            title: "Reload page after resizing the window for better experience"
+          });
     }
 }
 
