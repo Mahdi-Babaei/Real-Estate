@@ -3,7 +3,7 @@ const tabsDivElem = $.querySelectorAll(".tabsDiv")
 const browsePropertiesBtn = $.querySelectorAll("#browsePropertiesBtn")
 const firstSecTabs = $.querySelectorAll("#firstSecTabs")
 const propertiesContainer = $.querySelectorAll("#properties-container div")
-
+const testimonialsWrapper = $.querySelectorAll("#testimonialsWrapper div")
 
 
 // HeroSection tab switch
@@ -129,3 +129,23 @@ window.onload = () => {
         $.querySelector("#swiperContainer").className = 'swiper mySwiper'
     }
 }
+
+// Testimonials Generator
+testimonialsWrapper.forEach(dataDiv => {
+    let warpperDiv = $.createElement("div")
+    warpperDiv.className = 'swiper-slide'
+    warpperDiv.insertAdjacentHTML("beforeend" , `
+                            <div class="flex flex-col gap-y-10 pt-16 items-center">
+                                <p class="w-2/3 text-xl/[160%]">${dataDiv.dataset.comment}</p>
+                                <div class="flex items-center justify-center gap-x-3">
+                                    <img src="./images/profiles/${dataDiv.dataset.profile}.png" alt="" class="rounded-full w-16 h-16 border-2 border-lightPink p-1 object-cover">
+                                    <div class="flex items-center gap-x-1">
+                                        <h4 class="font-bold">${dataDiv.dataset.name},</h4>
+                                        <span class="text-lightGray font-normal">${dataDiv.dataset.rule}</span>
+                                    </div>
+                                </div>
+                            </div>
+        `)
+    $.querySelector("#testimonialsWrapper").append(warpperDiv)
+
+})
